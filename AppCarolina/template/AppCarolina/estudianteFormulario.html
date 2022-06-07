@@ -1,0 +1,14 @@
+{% extends "AppCarolina/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3 style="color:rgba(255, 255, 255, 0.904)"><b>Formulario para Estudiantes</b></h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<form action={% url 'EstudianteFormulario' %} method="POST">{% csrf_token %}
+    <h1 class="navbar-toggler navbar-toggler-left">Ingrese los datos del alumno</h1>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}

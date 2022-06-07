@@ -1,0 +1,17 @@
+{% extends "AppCarolina/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3 style="color:rgba(255, 255, 255, 0.904)">Carreras para la comisión buscada</h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<h1 class="navbar-toggler navbar-toggler-left">Carreras de la comisión {{comision}}</h1>
+{% if carreras %}
+<ul>
+    {% for carrera in carreras %}
+    <li>{{carrera.nombre}}</li>
+    <li>{{carrera.comision}}</li>
+    <br>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

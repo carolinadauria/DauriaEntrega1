@@ -1,0 +1,12 @@
+{% extends "AppCarolina/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3 style="color:rgba(255, 255, 255, 0.904)">Buscador de Carreras</h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<form action="{% url 'Buscar' %}" method="GET">
+    <h1 class="navbar-toggler navbar-toggler-left">Ingrese el número de comisión</h1>
+    <input type="number" name="comision" placeholder="Comisión" id="comision">
+    <input type="submit" value="Buscar">
+</form>
+{% endblock %}
